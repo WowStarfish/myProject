@@ -12,24 +12,27 @@ public class DeckOfCardsWithEnum {
            p1.drawACard();
            p2.drawACard();
         }
-
-
-        if (p1.sumCardsValue() > 21) {
-            System.out.println("P1 bust you lose. sum: " + p1.sumCardsValue());
-        }else if (p1.sumCardsValue() == 21) {
-            System.out.println("P2 you win. sum: " + p2.sumCardsValue());
+        
+        if ((p1.sumCardsValue() == 21) || (p2.sumCardsValue() == 21)) {
+           if (p1.sumCardsValue() ==21) {
+               System.out.println("P1 you win. sum: " + p1.sumCardsValue());
+           }else{
+              System.out.println("P2 you win. sum: "  + p2.sumCardsValue());
+           }
+        }else if ((p1.sumCardsValue() > 21) || (p2.sumCardsValue() > 21) {
+            if ((p1.sumCardsValue() > 21) && (p2.sumCardsValue() > 21))
+               System.out.println("you both lose. sum p1 : " + p1.sumCardsValue() + " sum p2 : " + p2.sumCardsValue());
+            }else if (p1.sumCardsValue() > 21) 
+               System.out.println("p2 you win: " + p2.sumCardsValue() + " sum p1 : " + p1.sumCardsValue()); 
+            }else{
+               System.out.println("p1 you win: " + p1.sumCardsValue() + " sum p2 : " + p2.sumCardsValue());
+            }
+        }else if (p1.sumCardsValue() > (p2.sumCardsValue()) {
+           System.out.println("p1 you win: " + p1.sumCardsValue() + " sum p2 : " + p2.sumCardsValue());
         }else{
-            System.out.println("P1 score is " + p1.sumCardsValue());
+           System.out.println("p2 you win: " + p2.sumCardsValue() + " sum p1 : " + p1.sumCardsValue());    
         }
-
-        if (p2.sumCardsValue() > 21) {
-            System.out.println("P2 bust you lose. sum: " + p2.sumCardsValue());
-        }else if (p2.sumCardsValue() == 21) {
-            System.out.println("P2 you win. sum: " + p2.sumCardsValue());
-        }else{
-            System.out.println("P2 score is " + p2.sumCardsValue());
-        }
-
+        
         p1.displayCardsDrawnSoFar();
 
         p2.displayCardsDrawnSoFar();
